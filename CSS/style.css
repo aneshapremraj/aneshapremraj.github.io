@@ -1,0 +1,29 @@
+@import 'https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600';
+
+/*default font for body text*/
+body {
+    font-family: Josefin Sans, sans-serif;
+    font-size: 18px;
+    line-height: 1.25;
+    font-weight: 400;
+}
+
+/*default heading size*/
+h1 { font-size: 250%; }
+
+/*common rules to all headings*/
+h1 {
+    font-weight: 600;
+}
+
+/*space under common elements*/
+p, h1 {
+    margin-bottom: 25px;
+}
+
+/*layout*/
+
+/* add some space around content to push it away from the edges of the browser*/
+body {
+    padding: 10px;
+}
