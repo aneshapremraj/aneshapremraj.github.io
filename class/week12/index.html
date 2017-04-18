@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Week 12</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <style media="screen">
+    #background {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        z-index: -1;
+        /* Ensure div tag stays behind content; -999 might work, too. */
+    }
+
+    #background img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .font24 {
+        font-size: 24px;
+    }
+
+    /*container*/
+            #myContainer {
+                height: 100%;
+                position: relative:
+            }
+
+            #hockeyContainer {
+                position: absolute;
+                top: 20%;
+                right: 50%;
+                transform: translate(-50%, -50%);
+                width: 100%;
+                background: rgba(0, 0, 0, 0.5);
+                color: #FFF;
+                padding-top: 64px;
+                padding-bottom: 64px;
+                text-align: center;
+            }
+
+            #hockeyContainer div {
+                padding: 10px;
+            }
+
+            #nameContainer {
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                margin: 0 auto;
+                width: 80%;
+            }
+
+            #nameContainer div {
+                padding-top: 3px;
+                padding-bottom: 3px;
+            }
+
+
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+    <div id="background">
+        <img src="images/background.jpg" alt="bckgrd">
+        <div id="myContainer">
+
+        </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      var hockeyUrl = "https://andersonguelphjs.github.io/class/week12/myJson.json";
+
+          $.get(hockeyUrl)
+            .done(function(data){
+
+              console.log("success ");
+              console.dir(data);//check out the data
+              var hockeyData = name; //make it easier to manage
+                          console.dir(hockeyData);
+                          $(document).ready(function() {
+                              var myHtml = "";
+                              myHtml += '<div id="hockeyContainer">';
+                              myHtml += '<div class="font24">' + hockeyData.name + '</div>';
+                              myHtml += '<div id="nameContainer">';
+                          })
+
+
+            })
+
+    </script>
+  </body>
+</html>
